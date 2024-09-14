@@ -2,7 +2,7 @@
 
 set -o errexit
 
-pip install -r requirements.txt
+pip install -r detari/requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 
