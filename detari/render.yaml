@@ -1,0 +1,12 @@
+
+services:
+  - type: web
+    name: javiel
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn detari.wsgi:application"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4

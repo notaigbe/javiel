@@ -1,0 +1,221 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="breadcrumb-option set-bg" data-setbg="{% static 'assets/img/breadcrumb/about-breadcrumb.jpg' %}">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="breadcrumb__text">
+<h2>About us</h2>
+<div class="breadcrumb__links">
+<a href="{% url 'index' %}">Home</a>
+<span>About</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="about spad">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<div class="about__text">
+<div class="section-title">
+<span>Be Bold</span>
+<h2>be the center of attention.</h2>
+</div>
+    <p>At Javiel, we believe that clothing is more than just fabric—it's an expression of who you are. We provide our clients with unique, custom-made garments that empower them to showcase their individuality.<br>
+
+    Our team comprises skilled designers and tailors with years of experience in the fashion industry. We work closely with our clients, listening to your ideas and turning them into reality. From the initial concept to the final fitting, we ensure every detail is perfect.<br>
+
+We pride ourselves on our commitment to quality, creativity, and customer satisfaction. </p>
+<a href="#" class="primary-btn">Contact us</a>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="about__pic">
+<img src="{% static 'assets/img/about/about-pic.png' %}" alt>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="team spad">
+<div class="container">
+<div class="row d-flex justify-content-center">
+<div class="col-lg-6 text-center">
+<div class="section-title">
+<span>Meet our team</span>
+<h2>Concept Designers</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="team__slider owl-carousel">
+<div class="col-lg-3">
+<div class="team__item">
+<div class="team__item__pic">
+<img src="{% static 'assets/img/team/team-1.jpg' %}" alt>
+</div>
+<div class="team__item__text">
+<h5>Jessica Michael</h5>
+<span>Founder</span>
+<p>Solor sit amet, consectetur adipiscing elit aliqua.</p>
+<div class="team__item__social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="team__item team__item__top">
+<div class="team__item__text">
+<h5>Laura Stephens</h5>
+<span>Designer</span>
+<p>Solor sit amet, consectetur adipiscing elit aliqua.</p>
+<div class="team__item__social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+</div>
+</div>
+<div class="team__item__pic">
+<img src="{% static 'assets/img/team/team-2.jpg' %}" alt>
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="team__item">
+<div class="team__item__pic">
+<img src="{% static 'assets/img/team/team-3.jpg' %}" alt>
+</div>
+<div class="team__item__text">
+<h5>Daisy Simmons</h5>
+<span>Creative Director</span>
+<p>Solor sit amet, consectetur adipiscing elit aliqua.</p>
+<div class="team__item__social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="team__item team__item__top">
+<div class="team__item__text">
+<h5>Louise Wagner</h5>
+<span>Fashion Designer</span>
+<p>Solor sit amet, consectetur adipiscing elit aliqua.</p>
+<div class="team__item__social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+</div>
+</div>
+<div class="team__item__pic">
+<img src="{% static 'assets/img/team/team-4.jpg' %}" alt>
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="team__item">
+<div class="team__item__pic">
+<img src="{% static 'assets/img/team/team-3.jpg' %}" alt>
+</div>
+<div class="team__item__text">
+<h5>Daisy Simmons</h5>
+<span>Manager</span>
+<p>Solor sit amet, consectetur adipiscing elit aliqua.</p>
+<div class="team__item__social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="testimonial spad">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="testimonial__slider owl-carousel">
+<div class="testimonial__item">
+<div class="testimonial__item__icon">
+<img src="{% static 'assets/img/testimonial/quote-icon.png' %}" alt>
+</div>
+<div class="testimonial__author">
+<div class="testimonial__author__pic">
+<img src="{% static 'assets/img/testimonial/ta-1.png' %}" alt>
+</div>
+<div class="testimonial__author__text">
+<h5>Danielle Benton</h5>
+<span>Blogger/Client</span>
+</div>
+</div>
+<p>Rachel you are so amazing at what you do! Thank you so much for everything! I felt so beautiful on our wedding day. Not only are you superwoman with a makeup brush, you are so lovely and such a delight to have around the morning of the wedding!! Any bride would be very lucky to have you part of her big day, I am very grateful that you were part of mine</p>
+</div>
+<div class="testimonial__item">
+<div class="testimonial__item__icon">
+<img src="{% static 'assets/img/testimonial/quote-icon.png' %}" alt>
+</div>
+<div class="testimonial__author">
+<div class="testimonial__author__pic">
+<img src="{% static 'assets/img/testimonial/ta-1.png' %}" alt>
+</div>
+<div class="testimonial__author__text">
+<h5>Dani Alves</h5>
+<span>Blogger/Client</span>
+</div>
+</div>
+<p>Rachel you are so amazing at what you do! Thank you so much for everything! I felt so beautiful on our wedding day. Not only are you superwoman with a makeup brush, you are so lovely and such a delight to have around the morning of the wedding!! Any bride would be very lucky to have you part of her big day, I am very grateful that you were part of mine</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="newslatter set-bg" data-setbg="{% static 'assets/img/newslatter-bg.jpg' %}">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<div class="newslatter__text">
+<h2>Subscribe to our newsletter</h2>
+</div>
+</div>
+<div class="col-lg-5 offset-lg-1">
+<div class="newslatter__form">
+<form action="#">
+<input type="text" placeholder="Email">
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+{% endblock %}
