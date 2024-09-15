@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from django.conf import settings
+
 
 # Product model
 class Product(models.Model):
@@ -44,3 +46,45 @@ class WishlistItem(models.Model):
 
     def __str__(self):
         return f"{self.product.name} in {self.user.username}'s wishlist"
+
+
+STATUS = ((0, 'DRAFT'), (1, 'PUBLISH'))
+CATEGORY = (('clothing', 'Clothing'), ('makeup', 'Make-Up'), ('catering', 'Catering'))
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    category = models.CharField(choices=CATEGORY, max_length=8, default='fish')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blog_posts')
+    updated_on = models.DateTimeField(auto_now=True)
+    post = models.TextField()
+    created_on = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='detari/javiel/blog/', default='detari/javiel/blog/default.jpg')
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return self.title
+
+    @property
+    def comments(self):
+        comments = Comment.objects.order_by('-created_on')[:5]
+        return comments
+
+
+class Comment(models.Model):
+    article = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name='comments')
+    author = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return 'Comment {} by {}'.format(self.body, self.name)

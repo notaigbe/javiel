@@ -36,16 +36,16 @@
 
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-      <div class="offcanvas__search search-switch">
-        <img src="{% static 'assets/img/icon/search.png' %}" alt />
-      </div>
-      <div class="offcanvas__logo">
+<!--      <div class="offcanvas__search search-switch">-->
+<!--        <img src="{% static 'assets/img/icon/search.png' %}" alt />-->
+<!--      </div>-->
+      <div class="offcanvas__logo text-center">
         <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo.png' %}" alt /></a>
       </div>
       <div id="mobile-menu-wrap"></div>
-      <div class="offcanvas__widget">
-        <a href="#" class="primary-btn">Get a Quote</a>
-      </div>
+<!--      <div class="offcanvas__widget">-->
+<!--        <a href="#" class="primary-btn">Get a Quote</a>-->
+<!--      </div>-->
     </div>
 
     <header class="header">
@@ -76,14 +76,16 @@
                   </li>
                   <li class="{{ blog }}"><a href="{% url 'blog' %}">Blog</a></li>
                   <li class="{{ contact }}"><a href="{% url 'contact' %}">Contact</a></li>
+                  <a href="#" class="primary-btn text-center">Get a Quote</a>
                 </ul>
+
               </nav>
-              <div class="header__option__right">
-                <div class="search__option search-switch">
-                  <img src="{% static 'assets/img/icon/search.png' %}" alt />
-                </div>
-                <a href="#" class="primary-btn">Get a Quote</a>
-              </div>
+<!--              <div class="header__option__right">-->
+<!--                <div class="search__option search-switch">-->
+<!--                  <img src="{% static 'assets/img/icon/search.png' %}" alt />-->
+<!--                </div>-->
+
+<!--              </div>-->
             </div>
           </div>
         </div>
