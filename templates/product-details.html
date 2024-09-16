@@ -1,250 +1,357 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-
-<div class="breadcrumb-option set-bg" data-setbg="img/breadcrumb/product-details-breadcrumb.jpg">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div class="breadcrumb__text">
-<h2>Product detail</h2>
-<div class="breadcrumb__links">
-<a href="{% url 'index' %}">Home</a>
-<span>Earth & Ocean eyeshadow palette</span>
+<div
+  class="breadcrumb-option set-bg"
+  data-setbg="img/breadcrumb/product-details-breadcrumb.jpg"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h2>Product detail</h2>
+          <div class="breadcrumb__links">
+            <a href="{% url 'index' %}">Home</a>
+            <span>Earth & Ocean eyeshadow palette</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 
 <section class="product-details spad">
-<div class="container">
-<div class="row">
-<div class="col-lg-6">
-<div class="product__details__pic">
-<div class="product__details__pic__item">
-<img src="{% static 'assets/img/product/details/product-big-1.jpg' %}" alt class="product__details__big__pic">
-</div>
-<div class="product__details__thumb">
-<div class="pt__item" data-imgbigurl="{% static 'assets/img/product/details/product-big-2.jpg' %}">
-<img src="{% static 'assets/img/product/details/product-big-2.jpg' %}" alt>
-</div>
-<div class="pt__item active" data-imgbigurl="{% static 'assets/img/product/details/product-big-1.jpg' %}">
-<img src="{% static 'assets/img/product/details/product-big-1.jpg' %}" alt>
-</div>
-<div class="pt__item" data-imgbigurl="{% static 'assets/img/product/details/product-big-3.jpg' %}">
-<img src="{% static 'assets/img/product/details/product-big-3.jpg' %}" alt>
-</div>
-<div class="pt__item" data-imgbigurl="{% static 'assets/img/product/details/product-big-4.jpg' %}">
-<img src="{% static 'assets/img/product/details/product-big-4.jpg' %}" alt>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="product__details__text">
-<div class="product__details__text__title">
-<h4>Earth & Ocean eyeshadow palette</h4>
-<div class="price">$210.0</div>
-<ul>
-<li>
-<div class="rating">
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-o"></i>
-</div>
-</li>
-<li><span>03 reviews</span></li>
-<li><span>Write a review</span></li>
-</ul>
-</div>
-<div class="product__details__info">
-<ul>
-<li>Categories: <span>Shoes</span></li>
-<li>Product code: <span>P.S 001</span></li>
-<li>Reward points: <span>30</span></li>
-<li>Availability: <span>In Stock</span></li>
-</ul>
-<div class="product__details__info__color">
-<h6>Color:</h6>
-<div class="product__details__info__color__items">
-<div class="pc__item">
-<input type="radio" id="pc-1">
-<label for="pc-1" class="active"></label>
-</div>
-<div class="pc__item">
-<input type="radio" id="pc-2">
-<label for="pc-2" class="color-2"></label>
-</div>
-<div class="pc__item">
-<input type="radio" id="pc-3">
-<label for="pc-3" class="color-3"></label>
-</div>
-</div>
-</div>
-</div>
-<div class="product__details__widget">
-<div class="quantity">
-<div class="pro-qty">
-<input type="text" value="1">
-</div>
-</div>
-<a href="#" class="pd__cart">ADD TO CART</a>
-<a href="#" class="heart__btn"><img src="{% static 'assets/img/icon/heart.png' %}" alt></a>
-</div>
-</div>
-</div>
-</div>
-<div class="product__details__desc__tab">
-<div class="row d-flex justify-content-center">
-<div class="col-lg-6">
-<ul class="nav nav-tabs" role="tablist">
-<li class="nav-item">
-<a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Description</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Shipping & Returns</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Reviews ( 03 )</a>
-</li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane active" id="tabs-1" role="tabpanel">
-<p>Operational change management inside of workflows to establish a framework. Taking
-seamless key performance indicators offline to maximise the long tail. Keeping your
-eye on the ball while performing a deep dive on the start-up mentality to derive
-convergence on cross-platform integration.</p>
-</div>
-<div class="tab-pane" id="tabs-2" role="tabpanel">
-<p>Operational change management inside of workflows to establish a framework. Taking
-seamless key performance indicators offline to maximise the long tail. Keeping your
-eye on the ball while performing a deep dive on the start-up mentality to derive
-convergence.</p>
-</div>
-<div class="tab-pane" id="tabs-3" role="tabpanel">
-<p>Operational change management inside of workflows to establish a framework. Taking
-seamless key performance indicators offline to maximise the long tail. Keeping your
-eye on the ball while performing a deep dive on the to derive convergence on
-cross-platform integration.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="related__products">
-<div class="container">
-<div class="row d-flex justify-content-center">
-<div class="col-lg-6 text-center">
-<div class="section-title">
-<span>Related Products</span>
-<h2>Related products</h2>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="product__slider owl-carousel">
-<div class="col-lg-3">
-<div class="product__item">
-<div class="product__item__pic set-bg" data-setbg="{% static 'assets/img/product/product-1.jpg' %}">
-<div class="product__item__hover">
-<ul>
-<li><a href="#"><i class="fa fa-shopping-bag"></i></a> <span>Add to Cart</span></li>
-<li><a href="#"><i class="fa fa-eye"></i></a> <span>Keep an eye</span></li>
-<li><a href="#"><i class="fa fa-heart"></i></a> <span>Love this</span></li>
-</ul>
-</div>
-</div>
-<div class="product__item__text">
-<span>Palettes</span>
-<h6><a href="#">Leather shopper bag</a></h6>
-<div class="price">$49.00</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3">
-<div class="product__item">
-<div class="product__item__pic set-bg" data-setbg="{% static 'assets/img/product/product-2.jpg' %}">
-<div class="product__item__hover">
-<ul>
-<li><a href="#"><i class="fa fa-shopping-bag"></i></a> <span>Add to Cart</span></li>
-<li><a href="#"><i class="fa fa-eye"></i></a> <span>Keep an eye</span></li>
-<li><a href="#"><i class="fa fa-heart"></i></a> <span>Love this</span></li>
-</ul>
-</div>
-</div>
-<div class="product__item__text">
-<span>Palettes</span>
-<h6><a href="#">Leather shopper bag</a></h6>
-<div class="price">$49.00</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3">
-<div class="product__item">
-<div class="product__item__pic set-bg" data-setbg="{% static 'assets/img/product/product-3.jpg' %}">
-<div class="product__item__hover">
-<ul>
-<li><a href="#"><i class="fa fa-shopping-bag"></i></a> <span>Add to Cart</span></li>
-<li><a href="#"><i class="fa fa-eye"></i></a> <span>Keep an eye</span></li>
-<li><a href="#"><i class="fa fa-heart"></i></a> <span>Love this</span></li>
-</ul>
-</div>
-</div>
-<div class="product__item__text">
-<span>Palettes</span>
-<h6><a href="#">Leather shopper bag</a></h6>
-<div class="price">$49.00</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3">
-<div class="product__item">
-<div class="product__item__pic set-bg" data-setbg="{% static 'assets/img/product/product-4.jpg' %}">
-<div class="product__item__hover">
-<ul>
-<li><a href="#"><i class="fa fa-shopping-bag"></i></a> <span>Add to Cart</span></li>
-<li><a href="#"><i class="fa fa-eye"></i></a> <span>Keep an eye</span></li>
-<li><a href="#"><i class="fa fa-heart"></i></a> <span>Love this</span></li>
-</ul>
-</div>
-</div>
-<div class="product__item__text">
-<span>Palettes</span>
-<h6><a href="#">Leather shopper bag</a></h6>
-<div class="price">$49.00</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3">
-<div class="product__item">
-<div class="product__item__pic set-bg" data-setbg="{% static 'assets/img/product/product-4.jpg' %}">
-<div class="product__item__hover">
-<ul>
-<li><a href="#"><i class="fa fa-shopping-bag"></i></a> <span>Add to Cart</span></li>
-<li><a href="#"><i class="fa fa-eye"></i></a> <span>Keep an eye</span></li>
-<li><a href="#"><i class="fa fa-heart"></i></a> <span>Love this</span></li>
-</ul>
-</div>
-</div>
-<div class="product__item__text">
-<span>Palettes</span>
-<h6><a href="#">Leather shopper bag</a></h6>
-<div class="price">$49.00</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="product__details__pic">
+          <div class="product__details__pic__item">
+            <img
+              src="{% static 'assets/img/product/details/product-big-1.jpg' %}"
+              alt
+              class="product__details__big__pic"
+            />
+          </div>
+          <div class="product__details__thumb">
+            <div
+              class="pt__item"
+              data-imgbigurl="{% static 'assets/img/product/details/product-big-2.jpg' %}"
+            >
+              <img
+                src="{% static 'assets/img/product/details/product-big-2.jpg' %}"
+                alt
+              />
+            </div>
+            <div
+              class="pt__item active"
+              data-imgbigurl="{% static 'assets/img/product/details/product-big-1.jpg' %}"
+            >
+              <img
+                src="{% static 'assets/img/product/details/product-big-1.jpg' %}"
+                alt
+              />
+            </div>
+            <div
+              class="pt__item"
+              data-imgbigurl="{% static 'assets/img/product/details/product-big-3.jpg' %}"
+            >
+              <img
+                src="{% static 'assets/img/product/details/product-big-3.jpg' %}"
+                alt
+              />
+            </div>
+            <div
+              class="pt__item"
+              data-imgbigurl="{% static 'assets/img/product/details/product-big-4.jpg' %}"
+            >
+              <img
+                src="{% static 'assets/img/product/details/product-big-4.jpg' %}"
+                alt
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="product__details__text">
+          <div class="product__details__text__title">
+            <h4>Earth & Ocean eyeshadow palette</h4>
+            <div class="price">$210.0</div>
+            <ul>
+              <li>
+                <div class="rating">
+                  <i class="fa fa-star-o"></i>
+                  <i class="fa fa-star-o"></i>
+                  <i class="fa fa-star-o"></i>
+                  <i class="fa fa-star-o"></i>
+                  <i class="fa fa-star-o"></i>
+                </div>
+              </li>
+              <li><span>03 reviews</span></li>
+              <li><span>Write a review</span></li>
+            </ul>
+          </div>
+          <div class="product__details__info">
+            <ul>
+              <li>Categories: <span>Shoes</span></li>
+              <li>Product code: <span>P.S 001</span></li>
+              <li>Reward points: <span>30</span></li>
+              <li>Availability: <span>In Stock</span></li>
+            </ul>
+            <div class="product__details__info__color">
+              <h6>Color:</h6>
+              <div class="product__details__info__color__items">
+                <div class="pc__item">
+                  <input type="radio" id="pc-1" />
+                  <label for="pc-1" class="active"></label>
+                </div>
+                <div class="pc__item">
+                  <input type="radio" id="pc-2" />
+                  <label for="pc-2" class="color-2"></label>
+                </div>
+                <div class="pc__item">
+                  <input type="radio" id="pc-3" />
+                  <label for="pc-3" class="color-3"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__details__widget">
+            <div class="quantity">
+              <div class="pro-qty">
+                <input type="text" value="1" />
+              </div>
+            </div>
+            <a href="#" class="pd__cart">ADD TO CART</a>
+            <a href="#" class="heart__btn"
+              ><img src="{% static 'assets/img/icon/heart.png' %}" alt
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product__details__desc__tab">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                data-toggle="tab"
+                href="#tabs-1"
+                role="tab"
+                >Description</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+                >Shipping & Returns</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                >Reviews ( 03 )</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+              <p>
+                Operational change management inside of workflows to establish a
+                framework. Taking seamless key performance indicators offline to
+                maximise the long tail. Keeping your eye on the ball while
+                performing a deep dive on the start-up mentality to derive
+                convergence on cross-platform integration.
+              </p>
+            </div>
+            <div class="tab-pane" id="tabs-2" role="tabpanel">
+              <p>
+                Operational change management inside of workflows to establish a
+                framework. Taking seamless key performance indicators offline to
+                maximise the long tail. Keeping your eye on the ball while
+                performing a deep dive on the start-up mentality to derive
+                convergence.
+              </p>
+            </div>
+            <div class="tab-pane" id="tabs-3" role="tabpanel">
+              <p>
+                Operational change management inside of workflows to establish a
+                framework. Taking seamless key performance indicators offline to
+                maximise the long tail. Keeping your eye on the ball while
+                performing a deep dive on the to derive convergence on
+                cross-platform integration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="related__products">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-title">
+            <span>Related Products</span>
+            <h2>Related products</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="product__slider owl-carousel">
+          <div class="col-lg-3">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="{% static 'assets/img/product/product-1.jpg' %}"
+              >
+                <div class="product__item__hover">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                      <span>Add to Cart</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-eye"></i></a>
+                      <span>Keep an eye</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-heart"></i></a>
+                      <span>Love this</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product__item__text">
+                <span>Palettes</span>
+                <h6><a href="#">Leather shopper bag</a></h6>
+                <div class="price">$49.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="{% static 'assets/img/product/product-2.jpg' %}"
+              >
+                <div class="product__item__hover">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                      <span>Add to Cart</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-eye"></i></a>
+                      <span>Keep an eye</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-heart"></i></a>
+                      <span>Love this</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product__item__text">
+                <span>Palettes</span>
+                <h6><a href="#">Leather shopper bag</a></h6>
+                <div class="price">$49.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="{% static 'assets/img/product/product-3.jpg' %}"
+              >
+                <div class="product__item__hover">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                      <span>Add to Cart</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-eye"></i></a>
+                      <span>Keep an eye</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-heart"></i></a>
+                      <span>Love this</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product__item__text">
+                <span>Palettes</span>
+                <h6><a href="#">Leather shopper bag</a></h6>
+                <div class="price">$49.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="{% static 'assets/img/product/product-4.jpg' %}"
+              >
+                <div class="product__item__hover">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                      <span>Add to Cart</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-eye"></i></a>
+                      <span>Keep an eye</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-heart"></i></a>
+                      <span>Love this</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product__item__text">
+                <span>Palettes</span>
+                <h6><a href="#">Leather shopper bag</a></h6>
+                <div class="price">$49.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="product__item">
+              <div
+                class="product__item__pic set-bg"
+                data-setbg="{% static 'assets/img/product/product-4.jpg' %}"
+              >
+                <div class="product__item__hover">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                      <span>Add to Cart</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-eye"></i></a>
+                      <span>Keep an eye</span>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-heart"></i></a>
+                      <span>Love this</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product__item__text">
+                <span>Palettes</span>
+                <h6><a href="#">Leather shopper bag</a></h6>
+                <div class="price">$49.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 {% endblock %}

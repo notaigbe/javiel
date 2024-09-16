@@ -1,7 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView, DetailView
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import CartItem, Product, Order, WishlistItem
+from .models import CartItem, Product, Order, WishlistItem, Blog
+
 
 # from .models import Blog, Product  # Uncomment and modify based on your models
 
@@ -43,15 +44,16 @@ class BlogView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['blog'] = "active"
+        context['blogs'] = Blog.objects.all()
         return context
 
 
 # Blog detail view
 class BlogDetailView(DetailView):
-    # model = Blog  # Uncomment and modify based on your Blog model
-    template_name = 'blog-detail.html'
+    model = Blog  # Uncomment and modify based on your Blog model
+    template_name = 'blog-details.html'
 
-    # context_object_name = 'blog_post'  # Name used in the template
+    context_object_name = 'blog_post'  # Name used in the template
 
     # If not using the model, you can manually get the object
     def get_object(self):
@@ -74,7 +76,7 @@ class ProductView(TemplateView):
 # Product detail view
 class ProductDetailView(DetailView):
     # model = Product  # Uncomment and modify based on your Product model
-    template_name = 'product-detail.html'
+    template_name = 'product-details.html'
 
     # context_object_name = 'product_item'
 
@@ -113,12 +115,14 @@ class WishlistView(TemplateView):
 class WorksView(TemplateView):
     template_name = 'works.html'
 
+
 # Shopping Cart view
 @login_required
 def cart_view(request):
     cart_items = CartItem.objects.filter(user=request.user)
     cart_total = sum(item.get_total_price() for item in cart_items)
     return render(request, 'cart.html', {'cart_items': cart_items, 'cart_total': cart_total})
+
 
 # Add to Cart view
 @login_required
@@ -132,12 +136,14 @@ def add_to_cart(request, product_id):
         cart_item.save()
     return redirect('cart')
 
+
 # Remove from Cart view
 @login_required
 def remove_from_cart(request, cart_item_id):
     cart_item = get_object_or_404(CartItem, id=cart_item_id, user=request.user)
     cart_item.delete()
     return redirect('cart')
+
 
 # Checkout view
 @login_required
@@ -158,11 +164,13 @@ def checkout_view(request):
 
     return render(request, 'checkout.html', {'cart_items': cart_items})
 
+
 # Wishlist view
 @login_required
 def wishlist_view(request):
     wishlist_items = WishlistItem.objects.filter(user=request.user)
     return render(request, 'wishlist.html', {'wishlist_items': wishlist_items})
+
 
 # Add to Wishlist view
 @login_required
@@ -170,6 +178,7 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     WishlistItem.objects.get_or_create(user=request.user, product=product)
     return redirect('wishlist')
+
 
 # Remove from Wishlist view
 @login_required

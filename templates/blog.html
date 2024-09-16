@@ -1,171 +1,215 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-
-<div class="breadcrumb-option set-bg" data-setbg="{% static 'assets/img/breadcrumb/blog-breadcrumb.jpg' %}">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div class="breadcrumb__text">
-<h2>Blog</h2>
-<div class="breadcrumb__links">
-<a href="{% url 'index' %}">Home</a>
-<span>Blog</span>
+<div
+  class="breadcrumb-option set-bg"
+  data-setbg="{% static 'assets/img/breadcrumb/blog-breadcrumb.jpg' %}"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h2>Blog</h2>
+          <div class="breadcrumb__links">
+            <a href="{% url 'index' %}">Home</a>
+            <span>Blog</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 
 <section class="blog spad">
-<div class="container">
-<div class="row">
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="#" class="blog__item__cat"><i class="fa fa-picture-o"></i></a>
-<h4><a href="#">Tips From Makeup Artists You’ve Never Heard</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-2.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="#" class="blog__item__cat"><i class="fa fa-file-text-o"></i></a>
-<h4><a href="#">Everything I Learned From A Professional Makeup Artist</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-3.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="https://www.youtube.com/watch?v=Pkh8UtuejGw" class="blog__item__cat video-popup"><i class="fa fa-play"></i></a>
-<h4><a href="#">10 Makeup-Artist Tips That Surprised (and Delighted) Us</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-4.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="#" class="blog__item__cat"><i class="fa fa-picture-o"></i></a>
-<h4><a href="#">The urban decay favourites team cult beauty swear by</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-5.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="#" class="blog__item__cat"><i class="fa fa-file-text-o"></i></a>
-<h4><a href="#">Glow recipe have launched your latest go to beauty</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-6.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="https://www.youtube.com/watch?v=Pkh8UtuejGw" class="blog__item__cat video-popup"><i class="fa fa-play"></i></a>
-<h4><a href="#">Supersize me: The very best XL beauty products to stock</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-7.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="#" class="blog__item__cat"><i class="fa fa-picture-o"></i></a>
-<h4><a href="#">Why now is a great time to fall for fresh</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-8.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="#" class="blog__item__cat"><i class="fa fa-file-text-o"></i></a>
-<h4><a href="#">Meet the brands making major sustainable strides</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog__item">
-<div class="blog__item__pic">
-<img src="{% static 'assets/img/blog/blog-9.jpg' %}" alt>
-</div>
-<div class="blog__item__text">
-<a href="https://www.youtube.com/watch?v=Pkh8UtuejGw" class="blog__item__cat video-popup"><i class="fa fa-play"></i></a>
-<h4><a href="#">Everything you need to know about cult conscious</a></h4>
-<ul>
-<li><span>Rosie Chapman</span></li>
-<li>Jun 15, 2020</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-12 text-center">
-<div class="more__btn"><a href="#">View more posts</a></div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a href="#" class="blog__item__cat"
+              ><i class="fa fa-picture-o"></i
+            ></a>
+            <h4><a href="#">Tips From Makeup Artists You’ve Never Heard</a></h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-2.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a href="#" class="blog__item__cat"
+              ><i class="fa fa-file-text-o"></i
+            ></a>
+            <h4>
+              <a href="#"
+                >Everything I Learned From A Professional Makeup Artist</a
+              >
+            </h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-3.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a
+              href="https://www.youtube.com/watch?v=Pkh8UtuejGw"
+              class="blog__item__cat video-popup"
+              ><i class="fa fa-play"></i
+            ></a>
+            <h4>
+              <a href="#"
+                >10 Makeup-Artist Tips That Surprised (and Delighted) Us</a
+              >
+            </h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-4.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a href="#" class="blog__item__cat"
+              ><i class="fa fa-picture-o"></i
+            ></a>
+            <h4>
+              <a href="#"
+                >The urban decay favourites team cult beauty swear by</a
+              >
+            </h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-5.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a href="#" class="blog__item__cat"
+              ><i class="fa fa-file-text-o"></i
+            ></a>
+            <h4>
+              <a href="#">Glow recipe have launched your latest go to beauty</a>
+            </h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-6.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a
+              href="https://www.youtube.com/watch?v=Pkh8UtuejGw"
+              class="blog__item__cat video-popup"
+              ><i class="fa fa-play"></i
+            ></a>
+            <h4>
+              <a href="#"
+                >Supersize me: The very best XL beauty products to stock</a
+              >
+            </h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-7.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a href="#" class="blog__item__cat"
+              ><i class="fa fa-picture-o"></i
+            ></a>
+            <h4><a href="#">Why now is a great time to fall for fresh</a></h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-8.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a href="#" class="blog__item__cat"
+              ><i class="fa fa-file-text-o"></i
+            ></a>
+            <h4>
+              <a href="#">Meet the brands making major sustainable strides</a>
+            </h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog__item">
+          <div class="blog__item__pic">
+            <img src="{% static 'assets/img/blog/blog-9.jpg' %}" alt />
+          </div>
+          <div class="blog__item__text">
+            <a
+              href="https://www.youtube.com/watch?v=Pkh8UtuejGw"
+              class="blog__item__cat video-popup"
+              ><i class="fa fa-play"></i
+            ></a>
+            <h4>
+              <a href="#">Everything you need to know about cult conscious</a>
+            </h4>
+            <ul>
+              <li><span>Rosie Chapman</span></li>
+              <li>Jun 15, 2020</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="more__btn"><a href="#">View more posts</a></div>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 {% endblock %}

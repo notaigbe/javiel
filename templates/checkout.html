@@ -1,144 +1,150 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-
-<div class="breadcrumb-option set-bg" data-setbg="{% static 'assets/img/breadcrumb/checkout-breadcrumb.jpg' %}">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div class="breadcrumb__text">
-<h2>Checkout</h2>
-<div class="breadcrumb__links">
-<a href="{% url 'index' %}">Home</a>
-<span>Checkout</span>
+<div
+  class="breadcrumb-option set-bg"
+  data-setbg="{% static 'assets/img/breadcrumb/checkout-breadcrumb.jpg' %}"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h2>Checkout</h2>
+          <div class="breadcrumb__links">
+            <a href="{% url 'index' %}">Home</a>
+            <span>Checkout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 
 <section class="checkout spad">
-<div class="container">
-<div class="checkout__form">
-<form action="#">
-<div class="row">
-<div class="col-lg-8">
-<div class="checkout__form__top">
-<div class="row">
-<div class="col-lg-6 col-md-6">
-<h5>Contact information</h5>
-</div>
-<div class="col-lg-6 col-md-6">
-<h6>Already have an account? <a href="#">Login</a></h6>
-</div>
-</div>
-</div>
-<div class="input__top">
-<input type="text" placeholder="Email or mobile phone number">
-<label for="kp">
-Keep me up to dateon news and exclusive offers
-<input type="checkbox" id="kp">
-<span class="checkmark"></span>
-</label>
-</div>
-<div class="checkout__address">
-<h5>Shipping address</h5>
-<div class="row">
-<div class="col-lg-6">
-<div class="input__item">
-<p>First name<span>*</span></p>
-<input type="text">
-</div>
-</div>
-<div class="col-lg-6">
-<div class="input__item">
-<p>Last name<span>*</span></p>
-<input type="text">
-</div>
-</div>
-<div class="col-lg-12">
-<div class="input__item">
-<p>Contact<span>*</span></p>
-<input type="text">
-</div>
-<div class="input__item double__input">
-<p>Address<span>*</span></p>
-<input type="text" placeholder="Steet address">
-<input type="text" placeholder="Apartment, suite, unite ect ( optinal )">
-</div>
-<div class="input__item">
-<p>Town/City<span>*</span></p>
-<input type="text">
-</div>
-<div class="input__item">
-<p>Country/State<span>*</span></p>
-<input type="text">
-</div>
-<div class="input__item">
-<p>Postcode/Zip<span>*</span></p>
-<input type="text">
-</div>
-<div class="input__item">
-<p>Oder note<span>*</span></p>
-<input type="text" placeholder="Note about your order, e.g, special note for delivery">
-</div>
-<label for="sv">
-Save this infomation for next time
-<input type="checkbox" id="sv">
-<span class="checkmark"></span>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4">
-<div class="checkout__proceed">
-<div class="checkout__proceed__title">
-<h5>Your order</h5>
-</div>
-<div class="checkout__proceed__coupon">
-<p>Enter coupon code. It will be applied at checkout.</p>
-<div class="coupon__input">
-<input type="text" placeholder="Your code here">
-<button type="submit">APPLY</button>
-</div>
-</div>
-<div class="checkout__proceed__product">
-<h5>Products</h5>
-<ul>
-<li>1x Succulent gym <span>$21.0</span></li>
-<li>1x The affogato <span>$32.0</span></li>
-<li>1x The dublin <span>$26.0</span></li>
-<li>1x The green thumb <span>$12.0</span></li>
-</ul>
-</div>
-<ul class="checkout__proceed__total">
-<li>Subtotal <span>$91.0</span></li>
-<li>Total <span>$91.0</span></li>
-</ul>
-<div class="checkout__proceed__widget">
-<label for="cp">
-Cheque payment
-<input type="checkbox" id="cp">
-<span class="checkmark"></span>
-</label>
-<label for="paypal">
-PayPal
-<input type="checkbox" id="paypal">
-<span class="checkmark"></span>
-</label>
-</div>
-<button type="submit" class="proceed__btn">PROCEED TO CHECKOUT</button>
-</div>
-</div>
-</div>
-</form>
-</div>
-</div>
+  <div class="container">
+    <div class="checkout__form">
+      <form action="#">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="checkout__form__top">
+              <div class="row">
+                <div class="col-lg-6 col-md-6">
+                  <h5>Contact information</h5>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <h6>Already have an account? <a href="#">Login</a></h6>
+                </div>
+              </div>
+            </div>
+            <div class="input__top">
+              <input type="text" placeholder="Email or mobile phone number" />
+              <label for="kp">
+                Keep me up to dateon news and exclusive offers
+                <input type="checkbox" id="kp" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="checkout__address">
+              <h5>Shipping address</h5>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="input__item">
+                    <p>First name<span>*</span></p>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="input__item">
+                    <p>Last name<span>*</span></p>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="input__item">
+                    <p>Contact<span>*</span></p>
+                    <input type="text" />
+                  </div>
+                  <div class="input__item double__input">
+                    <p>Address<span>*</span></p>
+                    <input type="text" placeholder="Steet address" />
+                    <input
+                      type="text"
+                      placeholder="Apartment, suite, unite ect ( optinal )"
+                    />
+                  </div>
+                  <div class="input__item">
+                    <p>Town/City<span>*</span></p>
+                    <input type="text" />
+                  </div>
+                  <div class="input__item">
+                    <p>Country/State<span>*</span></p>
+                    <input type="text" />
+                  </div>
+                  <div class="input__item">
+                    <p>Postcode/Zip<span>*</span></p>
+                    <input type="text" />
+                  </div>
+                  <div class="input__item">
+                    <p>Oder note<span>*</span></p>
+                    <input
+                      type="text"
+                      placeholder="Note about your order, e.g, special note for delivery"
+                    />
+                  </div>
+                  <label for="sv">
+                    Save this infomation for next time
+                    <input type="checkbox" id="sv" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="checkout__proceed">
+              <div class="checkout__proceed__title">
+                <h5>Your order</h5>
+              </div>
+              <div class="checkout__proceed__coupon">
+                <p>Enter coupon code. It will be applied at checkout.</p>
+                <div class="coupon__input">
+                  <input type="text" placeholder="Your code here" />
+                  <button type="submit">APPLY</button>
+                </div>
+              </div>
+              <div class="checkout__proceed__product">
+                <h5>Products</h5>
+                <ul>
+                  <li>1x Succulent gym <span>$21.0</span></li>
+                  <li>1x The affogato <span>$32.0</span></li>
+                  <li>1x The dublin <span>$26.0</span></li>
+                  <li>1x The green thumb <span>$12.0</span></li>
+                </ul>
+              </div>
+              <ul class="checkout__proceed__total">
+                <li>Subtotal <span>$91.0</span></li>
+                <li>Total <span>$91.0</span></li>
+              </ul>
+              <div class="checkout__proceed__widget">
+                <label for="cp">
+                  Cheque payment
+                  <input type="checkbox" id="cp" />
+                  <span class="checkmark"></span>
+                </label>
+                <label for="paypal">
+                  PayPal
+                  <input type="checkbox" id="paypal" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <button type="submit" class="proceed__btn">
+                PROCEED TO CHECKOUT
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
-
 
 {% endblock %}
