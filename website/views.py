@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView, DetailView
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import CartItem, Product, Order, WishlistItem, Blog
+from .models import CartItem, Product, Order, WishlistItem, Blog, Product, Project, Service
 
 
 # from .models import Blog, Product  # Uncomment and modify based on your models
@@ -13,6 +13,10 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['index'] = "active"
+        context['blogs'] = Blog.objects.all()[:3]
+        context['products'] = Product.objects.all()[:4]
+        context['services'] = Service.objects.all()
+        context['projects'] = Project.objects.all()
         return context
 
 
@@ -58,8 +62,8 @@ class BlogDetailView(DetailView):
     # If not using the model, you can manually get the object
     def get_object(self):
         blog_id = self.kwargs.get('id')
-        # return get_object_or_404(Blog, id=blog_id)
-        return {'id': blog_id}  # Example for context
+        return get_object_or_404(Blog, id=blog_id)
+        #return {'id': blog_id}  # Example for context
 
 
 # Product listing view
@@ -70,6 +74,7 @@ class ProductView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['product'] = "active"
+        context['products'] = Product.objects.all()
         return context
 
 
@@ -82,8 +87,8 @@ class ProductDetailView(DetailView):
 
     def get_object(self):
         product_id = self.kwargs.get('id')
-        # return get_object_or_404(Product, id=product_id)
-        return {'id': product_id}  # Example for context
+        return get_object_or_404(Product, id=product_id)
+        # return {'id': product_id}  # Example for context
 
 
 # Cart view

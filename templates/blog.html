@@ -22,23 +22,29 @@
 <section class="blog spad">
   <div class="container">
     <div class="row">
+      {% for blog in blogs %}
       <div class="col-lg-4 col-md-6">
         <div class="blog__item">
           <div class="blog__item__pic">
+            {% if image %}
+            <img src="{{ image.url }}" alt />
+            {% else %}
             <img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt />
+            {% endif %}
           </div>
           <div class="blog__item__text">
             <a href="#" class="blog__item__cat"
               ><i class="fa fa-picture-o"></i
             ></a>
-            <h4><a href="#">Tips From Makeup Artists You’ve Never Heard</a></h4>
+            <h4><a href="{% url 'blog-detail' blog.id %}">{{ blog.title }}</a></h4>
             <ul>
-              <li><span>Rosie Chapman</span></li>
-              <li>Jun 15, 2020</li>
+              <li><span>{{ blog.author }}</span></li>
+              <li>{{ blog.created_on }}</li>
             </ul>
           </div>
         </div>
       </div>
+      {% endfor %}
       <div class="col-lg-4 col-md-6">
         <div class="blog__item">
           <div class="blog__item__pic">

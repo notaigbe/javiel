@@ -44,10 +44,17 @@
             </p>
           </div>
           <div class="blog__details__pic">
+            {% if image %}
+            <img
+              src="{{ image.url }}"
+              alt
+            />
+            {% else %}
             <img
               src="{% static 'assets/img/blog/details/blog-details.jpg' %}"
               alt
             />
+            {% endif %}
           </div>
           <div class="blog__details__item">
             <h5>4. Powder in-between primer and foundation</h5>

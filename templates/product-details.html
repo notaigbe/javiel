@@ -11,7 +11,7 @@
           <h2>Product detail</h2>
           <div class="breadcrumb__links">
             <a href="{% url 'index' %}">Home</a>
-            <span>Earth & Ocean eyeshadow palette</span>
+            <span>{{ product.name }}</span>
           </div>
         </div>
       </div>
@@ -25,11 +25,19 @@
       <div class="col-lg-6">
         <div class="product__details__pic">
           <div class="product__details__pic__item">
+            {% if image %}
+            <img
+              src="{{ image.url }}"
+              alt
+              class="product__details__big__pic"
+            />
+            {% else %}
             <img
               src="{% static 'assets/img/product/details/product-big-1.jpg' %}"
               alt
               class="product__details__big__pic"
             />
+            {% endif %}
           </div>
           <div class="product__details__thumb">
             <div
@@ -74,8 +82,8 @@
       <div class="col-lg-6">
         <div class="product__details__text">
           <div class="product__details__text__title">
-            <h4>Earth & Ocean eyeshadow palette</h4>
-            <div class="price">$210.0</div>
+            <h4>{{ product.name }}</h4>
+            <div class="price">${{ product.price }}</div>
             <ul>
               <li>
                 <div class="rating">
@@ -92,7 +100,7 @@
           </div>
           <div class="product__details__info">
             <ul>
-              <li>Categories: <span>Shoes</span></li>
+              <li>Categories: <span>{{ product.category }}</span></li>
               <li>Product code: <span>P.S 001</span></li>
               <li>Reward points: <span>30</span></li>
               <li>Availability: <span>In Stock</span></li>
@@ -156,11 +164,7 @@
           <div class="tab-content">
             <div class="tab-pane active" id="tabs-1" role="tabpanel">
               <p>
-                Operational change management inside of workflows to establish a
-                framework. Taking seamless key performance indicators offline to
-                maximise the long tail. Keeping your eye on the ball while
-                performing a deep dive on the start-up mentality to derive
-                convergence on cross-platform integration.
+                {{ product.description }}
               </p>
             </div>
             <div class="tab-pane" id="tabs-2" role="tabpanel">
